@@ -12,7 +12,7 @@ class App extends Component {
     };
   }
   componentDidMount(){
-    isReachable('www.facebook.com').then(reachable => {
+    isReachable('www.facebook..........com').then(reachable => {
       console.log('----------------------------------------------------facebook----------------------------');
       App.socialReachable.facebook=reachable;
       if(App.socialReachable.twitter!==null){
@@ -39,7 +39,7 @@ class App extends Component {
 
   render() {
     console.log('---------------------------------------------------- render----------------------------');
-    let component = this.state.facebook && this.state.twitter ? <h1>Suprabh</h1> : null
+    let component = this.state.facebook!==null && this.state.twitter!==null ? <h1>Suprabh</h1> : null
     return (
      <div>
         {component}
